@@ -7,7 +7,7 @@ const imagemin = require('gulp-imagemin');
 
 function comprimeImagens() {
     return gulp.src('./source/images/*')
-        .pipe(imagemin())
+        .pipe(imagemin([imagemin.mozjpeg({quality: 75, progressive: true})]))
         .pipe(gulp.dest('./build/images'));
 }
 
@@ -24,28 +24,29 @@ function compileSass(){
 function comprimeJavaScript(){
     return gulp.src('./source/scripts/*.js')
         .pipe(uglify())
-        .pipe(obfuscate())
+        .pipe(obfuscate({exclude: ['length', 'src']}))
         .pipe(gulp.dest('./build/scripts'));
 }
 
-function funcaoPadrao(callback){
-    console.log('executando via gulp');
-    callback();
+function funcaoPadrao(done){
+    console.log('executando tarefa padrão');
+    gulp.series(
+        gulp.parallel(comprimeImagens, compileSass, comprimeJavaScript),
+        function completaTarefas(callback){
+            console.log('tarefa padrão complet.a');
+            callback()
+        }
+    )(done);
 }
 
-function dizOi(callback){
-    console.log("oi gulp!");
-    callback();
-}
-
-exports.default = gulp.parallel(funcaoPadrao, dizOi);
-exports.dizOi = dizOi;
+exports.default = funcaoPadrao;
 exports.sass = compileSass;
-exports.watch = function(){
-    gulp.watch('./source/syles/*.scss', gulp.series(compileSass));
-    gulp.watch('./source/scripts/*.js', gulp.series(compileSass));
-    gulp.watch('./source/images/*', gulp.series(comprimeImagens));
-
-}
 exports.comprimeImagens = comprimeImagens;
 exports.javascript = comprimeJavaScript;
+
+exports.watch = function(){
+    gulp.watch('./source/syles/*.scss', {ignoreInitial: false}, gulp.series(compileSass));
+    gulp.watch('./source/scripts/*.js', {ignoreInitial: false}, gulp.series(compileSass));
+    gulp.watch('./source/images/*', {ignoreInitial: false}, gulp.series(comprimeImagens));
+
+}
