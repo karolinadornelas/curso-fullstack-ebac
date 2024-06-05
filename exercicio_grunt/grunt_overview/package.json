@@ -1,0 +1,22 @@
+{
+  "name": "exercicio_grunt",
+  "version": "1.0.0",
+  "description": "exercicio grunt",
+  "main": "index.js",
+  "scripts": {
+    "grunt": "grunt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "curso-fullstack-ebac"
+  },
+  "author": "karolinadornelas",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-concurrent": "^3.0.0",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-sass": "^2.0.0"
+  }
+}
