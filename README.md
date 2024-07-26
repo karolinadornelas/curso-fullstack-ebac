@@ -8,7 +8,7 @@
 <img
      align="right"
      height="250"
-     src="https://github.com/karolinadornelas/curso-ebac-fullstack/blob/main/assets/3d-casual-life-article-review.png">
+     src="https://github.com/karolinadornelas/curso-ebac-fullstack/blob/main/assets/files-removebg-preview.png">
     
 [**EBAC**](https://ebaconline.com.br/) |
 [**LinkedIn**](https://www.linkedin.com/in/karolina-dornelas-b6aa29239/) |
