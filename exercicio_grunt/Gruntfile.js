@@ -32,11 +32,11 @@ module.exports = function(grunt) {
                     patterns: [
                         {
                             match: 'ENDERECO_DO_CSS',
-                            replacement: './styles/main.css'
+                            replacement: 'styles/main.css'
                         },
                         {
                             match: 'ENDERECO_DO_JS',
-                            replacement: './scripts/main.js'
+                            replacement: 'scripts/main.js'
                         }
                     ]
                 },
@@ -54,11 +54,11 @@ module.exports = function(grunt) {
                     patterns: [
                         {
                             match: 'ENDERECO_DO_CSS',
-                            replacement: './styles/main.min.css'
+                            replacement: 'styles/main.min.css'
                         },
                         {
                             match: 'ENDERECO_DO_JS',
-                            replacement: './scripts/main.min.js'
+                            replacement: 'scripts/main.min.js'
                         }
                     ]
                 },
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
                     'prebuild/index.html': 'src/index.html'
                 }
             }
-        },        
+        },
         clean: ['prebuild'],
         uglify: {
             target: {
