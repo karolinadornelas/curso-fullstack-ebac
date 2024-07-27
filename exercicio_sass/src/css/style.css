@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Starborn";
+  src: url(/exercicio_sass/assets/fonts/Starborn.otf);
+}
+@font-face {
+  font-family: "Candy Beans";
+  src: url(/exercicio_sass/assets/fonts/Candy\ Beans.otf);
+}
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  color: #BC6D19;
+  justify-content: space-around;
+  background-color: #f2ca9f;
+}
+
+#content-container {
+  margin: 0;
+  padding: 0;
+}
+
+#footer-notes {
+  width: 100%;
+  overflow: hidden;
+  background-color: #8b4a05;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  box-sizing: border-box;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: "Jua";
+  letter-spacing: 2px;
+}
+
+.notes-items {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 35s linear infinite;
+}
+.notes-items span {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 1rem;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.shop-header-bundle h1 {
+  font-family: "Starborn";
+  font-size: 55px;
+}
+.shop-header-bundle h4 {
+  font-family: "Candy Beans";
+  font-size: 24px;
+  margin-top: -25px;
+  color: #8b4a05;
+}
+
+.shop-header-bundle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.shop-header-bundle-icons img {
+  margin-bottom: -5px;
+}
+
+#products {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+}
+
+.product-bundle {
+  display: flex;
+}
+
+.product-card {
+  cursor: pointer;
+  border: 1px solid #BC6D19;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: start;
+  margin: 10px;
+  color: rgb(109, 67, 11);
+}
+.product-card img {
+  width: 200px;
+}
+.product-card h3 {
+  font-family: "Jua";
+  margin-top: -30px;
+}
+.product-card p {
+  font-family: "Antic Didone";
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: -15px;
+}
+.product-card h4 {
+  font-family: "Antic Didone";
+  font-weight: 900;
+}
+
+.product-card:hover {
+  background-color: #f2ca9f;
+}
+
+.product-info {
+  text-align: start !important;
+  padding: 15px;
+  width: 280px;
+}
+
+footer {
+  background-color: #8b4a05;
+  display: flex;
+  font-family: "Jua";
+  color: #f2ca9f;
+  align-content: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
