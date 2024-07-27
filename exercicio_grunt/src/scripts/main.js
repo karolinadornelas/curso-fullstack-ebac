@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('form-raffle').addEventListener('submit', function(evento) {
         evento.preventDefault();
-        let maxNumber = document.getElementById('max-value').value;
+        let maxNumber = document.getElementById('max-number').value;
         maxNumber = parseInt(maxNumber);
 
         let randomNumber = Math.random() * maxNumber;
