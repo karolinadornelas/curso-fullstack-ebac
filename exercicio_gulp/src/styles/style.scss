@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Starborn";
+    src: url(/exercicio_gulp/src/fonts/Starborn.otf);
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #cde0ff;
+
+}
+
+#content-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: "Starborn";
+}
+
+p{
+    font-family: "Jua";
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    border-radius: 75px;
+}
+
+button{
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    margin: 25px;
+    font-family: "Jua";
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #a4c6fe;
+    color: white;
+}
+
+footer{
+    color: #a4c6fe;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
