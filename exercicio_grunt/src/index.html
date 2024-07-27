@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="@@ENDERECO_DO_CSS">
+    <title>Sorteador</title>
+</head>
+<body>
+    <div id="content-container">
+        <header>
+            <img src="/exercicio_grunt/src/assets/sprout.gif" alt="brotinho">
+            <h1>Sorteador</h1>
+        </header>
+        
+        <form id="form-raffle">
+            <div>
+                <label for="max-number">Número máximo</label>
+                <input type="number" id="max-value" required min="2" value="2" step="1">
+            </div>
+            <button type="submit">sortear!</button>
+        </form>
+        <div class="result">
+            O número sorteado foi: <span id="result-value"></span>
+        </div>
+    </div> 
+    <script src="@@ENDERECO_DO_JS"></script>
+</body>
+</html>
