@@ -1,0 +1,22 @@
+{
+  "name": "exercicio_sass",
+  "version": "1.0.0",
+  "description": "entrega de exercicio modulo sass",
+  "main": "index.js",
+  "scripts": {
+      "sass": "sass src/sass/style.scss src/css/style.css --watch",
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "curso-fullstack-ebac"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "karolinadornelas",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}
