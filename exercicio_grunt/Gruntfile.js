@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {
@@ -32,11 +32,11 @@ module.exports = function (grunt) {
                     patterns: [
                         {
                             match: 'ENDERECO_DO_CSS',
-                            replacement: './styles/main.css'
+                            replacement: 'styles/main.css'
                         },
                         {
                             match: 'ENDERECO_DO_JS',
-                            replacement: './scripts/main.js'
+                            replacement: 'scripts/main.js'
                         }
                     ]
                 },
@@ -49,31 +49,28 @@ module.exports = function (grunt) {
                     }
                 ]
             },
-            replace: {
-                dist: {
-                    options: {
-                        patterns: [
-                            {
-                                match: '@@ENDERECO_DO_CSS',
-                                replacement: './styles/main.min.css'
-                            },
-                            {
-                                match: '@@ENDERECO_DO_JS',
-                                replacement: './scripts/main.min.js'
-                            }
-                        ]
-                    },
-                    files: [
+            dist: {
+                options: {
+                    patterns: [
                         {
-                            expand: true,
-                            flatten: true,
-                            src: ['prebuild/index.html'],
-                            dest: 'dist/'
+                            match: 'ENDERECO_DO_CSS',
+                            replacement: 'styles/main.min.css'
+                        },
+                        {
+                            match: 'ENDERECO_DO_JS',
+                            replacement: 'scripts/main.min.js'
                         }
                     ]
-                }
+                },
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['prebuild/index.html'],
+                        dest: 'dist/'
+                    }
+                ]
             }
-
         },
         htmlmin: {
             dist: {
